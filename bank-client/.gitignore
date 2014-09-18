@@ -1,0 +1,9 @@
+*.sw*
+*~
+build/
+bin/
+node_modules/
+vendor/
+.idea/
+.iml
+.travis.yml
