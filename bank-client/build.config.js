@@ -9,6 +9,7 @@ module.exports = {
    */
   build_dir: 'build',
   compile_dir: 'bin',
+  compile_webapp: '../bank-server/src/main/webapp',
 
   /**
    * This is a collection of file patterns that refer to our app code (the

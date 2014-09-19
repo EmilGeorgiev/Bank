@@ -148,7 +148,19 @@ module.exports = function ( grunt ) {
             expand: true
           }
         ]
-      }
+      },
+
+        compile_bin: {
+            expand: true,
+            files: [
+                {
+                    expand: true,
+                    cwd: '.',
+                    src: ['<%= compile_dir %>/assets/ngbp-0.3.2.css', '<%= compile_dir %>/assets/ngbp-0.3.2.js', '<%= compile_dir %>/index.html'],
+                    dest: '../bank-server/src/main/webapp'
+                }
+            ]
+        }
     },
 
     /**
@@ -630,5 +642,10 @@ module.exports = function ( grunt ) {
       }
     });
   });
+
+
+    grunt.registerTask('copycompile', ['build', 'compile', 'copy:compile_bin']);
+
+
 
 };
