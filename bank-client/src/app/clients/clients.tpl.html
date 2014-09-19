@@ -1,5 +1,4 @@
 <div>
-
     <i class="fa fa-search"></i> <input type="text" ng-model="query" placeholeder="Client name">
     <h3>All clients</h3>
     <ul style="list-style-type:none">
@@ -8,15 +7,20 @@
                 <li ng-repeat="client in clients | filter:query">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-
-                            <button class="span12" type="button">
-                               <i class="fa fa-edit"></i> edit
-                            </button>
-                            <i></i>
-
+                            <a ui-sref="clients.edit" class="btn btn-default">
+                                <i class="fa fa-edit"></i>
+                                Edit
+                            </a>
                         </div>
                         <div class="panel-body">
-                            {{client.clientName}}
+                            <div class="row">
+                                <div class="col-md-4">
+                                    {{client.clientName}}
+                                </div>
+                                <div class="col-md-8">
+                                    <div ui-view="editClient"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </li>

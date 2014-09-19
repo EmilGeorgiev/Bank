@@ -1,7 +1,7 @@
 ///**
 // * Created by emil on 14-9-12.
 // */
-angular.module('clients', ['ui.router'])
+angular.module('clients', ['ui.router', 'clientEdit'])
 
 
 .config(['$stateProvider', function($stateProvider) {
@@ -15,6 +15,7 @@ angular.module('clients', ['ui.router'])
             },
             data: {pageTitle: "Clients"}
         });
+
     }])
 
 
